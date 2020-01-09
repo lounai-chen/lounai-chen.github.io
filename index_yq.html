@@ -1076,9 +1076,10 @@
             let mp3 = document.querySelector('#mp3')
             let playBtn = document.querySelector('#play-btn')
             let play
-            mp3.load()
+            mp3.load()			
             document.addEventListener("WeixinJSBridgeReady", function () { 
                 mp3.play()
+				playBtn.style.animationPlayState = 'running'
                 if (!mp3.paused) {
                     this.style.animationPlayState = 'running'
                     mp3.play()
